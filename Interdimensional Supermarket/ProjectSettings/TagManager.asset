@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Customer
   - Coin
+  - coinText
   layers:
   - Default
   - TransparentFX
