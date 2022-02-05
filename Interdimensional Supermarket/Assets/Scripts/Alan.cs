@@ -6,6 +6,7 @@ public class Alan : MonoBehaviour
 {
     private Transform t;
     public bool isUp;
+    public int points = 0;
     public Animator anim;
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class Alan : MonoBehaviour
     void OnTriggerEnter2D(Collider2D target) {
         if(target.gameObject.tag == "Coin") {
             Destroy(target.gameObject);
+            points += 1;
         }
     }
 
