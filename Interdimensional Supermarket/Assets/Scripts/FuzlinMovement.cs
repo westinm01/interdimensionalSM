@@ -33,6 +33,7 @@ public class FuzlinMovement : CustomerMovement
 
         Vector3 newPos = new Vector3(xPos + xDirection, yPos + yDirection);  // Add/Subtract 1 to xPos and yPos
         gameObject.transform.position = newPos;
+        UpdateBoardPos();
     }
 
     protected override void Start(){

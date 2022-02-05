@@ -165,3 +165,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveFrequency: 1
+  staticBoardPos: 1
