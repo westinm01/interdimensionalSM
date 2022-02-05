@@ -11,6 +11,10 @@ public class Alan : MonoBehaviour
         t=gameObject.transform;
     }
 
+    void OnCollisionEnter(Collision collision) {
+        Debug.Log("HASDASDASD");
+    }
+
     // Update is called once per frame
     void Update()
     {

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311926, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,6 +123,58 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &129897887 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4478894599480197852, guid: e608fdc20cca9a24d9372aa2c80d48d8, type: 3}
+  m_PrefabInstance: {fileID: 4478894597769446074}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &129897893
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129897887}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!1 &279818039 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4499409175613975310, guid: 5ef70de735dd0c341925da5abc68a338, type: 3}
+  m_PrefabInstance: {fileID: 4499409175358780425}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &279818044
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279818039}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &442613860
 GameObject:
   m_ObjectHideFlags: 0
@@ -2662,6 +2714,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4478894599480197840, guid: e608fdc20cca9a24d9372aa2c80d48d8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478894599480197840, guid: e608fdc20cca9a24d9372aa2c80d48d8, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478894599480197840, guid: e608fdc20cca9a24d9372aa2c80d48d8, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4478894599480197843, guid: e608fdc20cca9a24d9372aa2c80d48d8, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2719,6 +2783,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4499409175613975298, guid: 5ef70de735dd0c341925da5abc68a338, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4499409175613975299, guid: 5ef70de735dd0c341925da5abc68a338, type: 3}
       propertyPath: m_RootOrder
       value: 7
