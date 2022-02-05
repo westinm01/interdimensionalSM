@@ -11,6 +11,12 @@ public class Alan : MonoBehaviour
         t=gameObject.transform;
     }
 
+    void OnTriggerEnter2D(Collider2D target) {
+        if(target.gameObject.tag == "Coin") {
+            Destroy(target.gameObject);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
