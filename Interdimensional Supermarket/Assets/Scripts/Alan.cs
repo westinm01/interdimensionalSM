@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Alan : MonoBehaviour
 {
     private Transform t;
     public bool isUp;
+    public int points = 0;
     public Animator anim;
     // Start is called before the first frame update
     void Start()
@@ -18,7 +20,10 @@ public class Alan : MonoBehaviour
     void OnTriggerEnter2D(Collider2D target) {
         if(target.gameObject.tag == "Coin") {
             Destroy(target.gameObject);
+            points += 1;
         }
+        Text txt = GameObject.FindWithTag("coinText").GetComponent<Text>();
+        txt.text = "Score: " + points;
     }
 
     // Update is called once per frame
