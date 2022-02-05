@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6795231038780715468}
   - component: {fileID: 6795231038780715465}
   - component: {fileID: -3137120683035808704}
+  - component: {fileID: 2861653291210299211}
   m_Layer: 0
   m_Name: Octole
   m_TagString: Customer
@@ -151,3 +152,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2861653291210299211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6795231038780715469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea15c07b536c9549b869e26d86a57b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveFrequency: 1
