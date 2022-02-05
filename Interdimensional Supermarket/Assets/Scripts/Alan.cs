@@ -8,6 +8,7 @@ public class Alan : MonoBehaviour
     private Transform t;
     public bool isUp;
     public int points = 0;
+    public Text highScoreText;
     public Animator anim;
     // Start is called before the first frame update
     void Start()
@@ -30,7 +31,11 @@ public class Alan : MonoBehaviour
 
             points += 1;
         }
+        if (points > StaticBoard.highScore){
+            StaticBoard.highScore = points;
+        }
         Text txt = GameObject.FindWithTag("coinText").GetComponent<Text>();
+        highScoreText.text = "High score: " + StaticBoard.highScore;
         txt.text = "Score: " + points;
     }
 
