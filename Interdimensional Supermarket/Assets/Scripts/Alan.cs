@@ -29,9 +29,11 @@ public class Alan : MonoBehaviour
             target.transform.position = newPos;
 
             points += 1;
+
+            Text txt = GameObject.FindWithTag("coinText").GetComponent<Text>();
+            txt.text = "Score: " + points;
         }
-        Text txt = GameObject.FindWithTag("coinText").GetComponent<Text>();
-        txt.text = "Score: " + points;
+
     }
 
     // Update is called once per frame
