@@ -905,24 +905,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &876359050 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3521993318873848244, guid: 440b2990326bba74cabe8378c3bd2bbc, type: 3}
-  m_PrefabInstance: {fileID: 3521993318325832425}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &876359056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 876359050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcf539c1d641f064c865876ff698b29c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveFrequency: 1
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2670,6 +2652,10 @@ PrefabInstance:
     - target: {fileID: 3521993318873848244, guid: 440b2990326bba74cabe8378c3bd2bbc, type: 3}
       propertyPath: m_Name
       value: eyeguy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3521993318873848244, guid: 440b2990326bba74cabe8378c3bd2bbc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 440b2990326bba74cabe8378c3bd2bbc, type: 3}
