@@ -21,8 +21,9 @@ public class OctoleMovement : CustomerMovement
         //     transform.rotation = Quaternion.Euler(0, 0, 0);
         // }
 
-        Vector3 newPos = new Vector3(oldPos.x, Mathf.Round(oldPos.y) + direction );  // Add/Subtract 1 to xPos, round to nearest whole
+        Vector3 newPos = new Vector3(oldPos.x, Mathf.Round(oldPos.y) + direction );  // Add/Subtract 1 to xPos, round to nearest whole    
         gameObject.transform.position = newPos;
+        UpdateBoardPos();
     }
 
     protected override void Start(){
