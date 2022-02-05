@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CustomerMovement : MonoBehaviour
-{
-    public Vector2 position;
-    
+{   
+    public float moveSpeed;
+    private float moveTimer;
     public virtual void move(){
 
     }
@@ -13,12 +13,14 @@ public class CustomerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        moveTimer = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (moveTimer > moveSpeed){
+            moveTimer = 0;
+        }
     }
 }
