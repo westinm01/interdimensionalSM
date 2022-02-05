@@ -8,12 +8,23 @@ public class PokoonMovement : CustomerMovement
     public override void move(){
         Vector3 oldPos = gameObject.transform.position;
         float xPos = Mathf.Round(oldPos.x);
-        if (gameObject.transform.position.x >= StaticBoard.numCols - 1){    // Doesnt move off right of map
+        // bool rightBlocked = CheckOccupied(new Vector2(xPos + 1, oldPos.y));
+        // bool leftBlocked = CheckOccupied(new Vector2(xPos - 1, oldPos.y));
+
+        if (gameObject.transform.position.x >= StaticBoard.numCols - 1 && direction > 0){    // Doesnt move off right of map
             direction = -1;
         }
-        else if (gameObject.transform.position.x <= 0){                     // Doesn't move off left of map
+        else if (gameObject.transform.position.x <= 0 && direction < 0){                     // Doesn't move off left of map
             direction = 1;
         }
+        // else if (direction < 0 && leftBlocked){     // If moving left and left is blocked
+        //     direction = 1;
+        //     return;
+        // }
+        // else if (direction > 0 && rightBlocked){    // If moving right and right is blocked
+        //     direction = -1;
+        //     return;
+        // }
 
         if (direction > 0){
             transform.rotation = Quaternion.Euler(0, 180, 0);

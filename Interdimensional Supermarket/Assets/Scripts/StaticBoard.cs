@@ -8,5 +8,6 @@ public class StaticBoard : MonoBehaviour
     public static int numCols = 8;
 
     public static int[,] occupiedPositions = {{-1, -1}, {-1, -1}, {-1, -1}, {-1, -1}};
+    public static int numEnemies;
     public static int highScore;
 }
