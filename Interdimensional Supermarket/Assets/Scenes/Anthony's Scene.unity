@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &442613861
 Transform:
   m_ObjectHideFlags: 0
@@ -905,24 +905,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &876359050 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3521993318873848244, guid: 440b2990326bba74cabe8378c3bd2bbc, type: 3}
-  m_PrefabInstance: {fileID: 3521993318325832425}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &876359056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 876359050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcf539c1d641f064c865876ff698b29c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveFrequency: 1
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,7 +982,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.5, y: -3.5, z: -10}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1805,7 +1787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1444454194
 Transform:
   m_ObjectHideFlags: 0
@@ -2785,10 +2767,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: coin
       objectReference: {fileID: 0}
-    - target: {fileID: 4499409175613975310, guid: 5ef70de735dd0c341925da5abc68a338, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ef70de735dd0c341925da5abc68a338, type: 3}
 --- !u!1001 &6795231038799551405
@@ -2903,10 +2881,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: fuzlin
       objectReference: {fileID: 0}
-    - target: {fileID: 7392196853730270782, guid: 2e13b94fd16ccba4b92293b34f53b319, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e13b94fd16ccba4b92293b34f53b319, type: 3}
 --- !u!1001 &9045241631048375445
@@ -2919,10 +2893,6 @@ PrefabInstance:
     - target: {fileID: 9045241629303533889, guid: 818b498cc912df24b93f5f251aea56bf, type: 3}
       propertyPath: m_Name
       value: Pokoon
-      objectReference: {fileID: 0}
-    - target: {fileID: 9045241629303533889, guid: 818b498cc912df24b93f5f251aea56bf, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9045241629303533890, guid: 818b498cc912df24b93f5f251aea56bf, type: 3}
       propertyPath: m_RootOrder

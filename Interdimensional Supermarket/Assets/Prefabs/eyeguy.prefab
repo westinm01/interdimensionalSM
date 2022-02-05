@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3521993318873848247}
   - component: {fileID: 3521993318873848200}
   - component: {fileID: -849710826419733311}
+  - component: {fileID: 6279351910337618887}
   m_Layer: 0
   m_Name: eyeguy
   m_TagString: Customer
@@ -151,3 +152,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6279351910337618887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3521993318873848244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcf539c1d641f064c865876ff698b29c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveFrequency: 2

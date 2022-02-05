@@ -10,17 +10,14 @@ public class CustomerMovement : MonoBehaviour
     private float moveTimer;
     public virtual void move(){
         gameObject.transform.position += new Vector3(1,0);
-        // rb.velocity = new Vector2(1, 0);
     }
 
-    // Start is called before the first frame update
     protected virtual void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         moveTimer = 0;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (moveTimer > moveFrequency){
