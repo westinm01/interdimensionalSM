@@ -7,10 +7,10 @@ public class PokoonMovement : CustomerMovement
     private int direction;
     public override void move(){
         Vector3 oldPos = gameObject.transform.position;
-        if (gameObject.transform.position.x >= StaticBoard.numRows - 1){
+        if (gameObject.transform.position.x >= StaticBoard.numCols - 1){    // Doesnt move off right of map
             direction = -1;
         }
-        else if (gameObject.transform.position.x <= 0){
+        else if (gameObject.transform.position.x <= 0){                     // Doesn't move off left of map
             direction = 1;
         }
 
@@ -21,10 +21,8 @@ public class PokoonMovement : CustomerMovement
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
 
-        Vector3 newPos = new Vector3(Mathf.Round(oldPos.x) + direction, oldPos.y);
+        Vector3 newPos = new Vector3(Mathf.Round(oldPos.x) + direction, oldPos.y);  // Add/Subtract 1 to xPos, round to nearest whole
         gameObject.transform.position = newPos;
-        // gameObject.transform.position += new Vector3(direction, 0);
-        // rb.velocity = new Vector2(1, 0);
     }
 
     protected override void Start(){

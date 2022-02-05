@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7392196853730270783}
   - component: {fileID: 7392196853730270770}
   - component: {fileID: 221638563808436847}
+  - component: {fileID: 4247407809893581262}
   m_Layer: 0
   m_Name: fuzlin
   m_TagString: Customer
@@ -151,3 +152,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4247407809893581262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7392196853730270782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 822c320f76bb4c34f9d9c0383002cb77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveFrequency: 1
