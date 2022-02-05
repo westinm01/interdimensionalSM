@@ -30,15 +30,9 @@ public class Alan : MonoBehaviour
             target.transform.position = newPos;
 
             points += 1;
-        }
-        if (points > StaticBoard.highScore){
-            StaticBoard.highScore = points;
-        }
-        Text txt = GameObject.FindWithTag("coinText").GetComponent<Text>();
-        highScoreText.text = "High score: " + StaticBoard.highScore;
-        txt.text = "Score: " + points;
-        if(target.gameObject.tag== "Customer"){
-            Debug.Log("Game Over");
+
+            Text txt = GameObject.FindWithTag("coinText").GetComponent<Text>();
+            txt.text = "Score: " + points;
         }
     }
     // Update is called once per frame
