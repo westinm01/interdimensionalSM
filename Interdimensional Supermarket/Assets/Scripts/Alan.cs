@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Alan : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class Alan : MonoBehaviour
             Destroy(target.gameObject);
             points += 1;
         }
+        Text txt = GameObject.FindWithTag("coinText").GetComponent<Text>();
+        txt.text = "Score: " + points;
     }
 
     // Update is called once per frame
