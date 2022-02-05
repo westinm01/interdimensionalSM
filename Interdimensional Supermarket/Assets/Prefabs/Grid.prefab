@@ -1784,6 +1784,10 @@ MonoBehaviour:
   redmap: {fileID: 0}
   bluemap: {fileID: 0}
   yellowmap: {fileID: 0}
+  gameManager: {fileID: 0}
+  startTime: 1000
+  endTime: 300
+  decrement: 50
   c: {fileID: 0}
 --- !u!1 &7871729168028205482
 GameObject:

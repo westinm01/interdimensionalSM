@@ -8,6 +8,10 @@ public class MapSwitch : MonoBehaviour
     public GameObject redmap;
     public GameObject bluemap;
     public GameObject yellowmap;
+    public GameObject gameManager;
+    public float startTime;
+    public float endTime;
+    public float decrement;
     //public GameObject cam;
     public Camera c;
     private int state;
@@ -33,7 +37,7 @@ public class MapSwitch : MonoBehaviour
     void Update()
     {
         timer++;
-        if(timer==1000){
+        if(timer>=startTime){
             timer=0;
             state=(state+1)%3;
             switch(state){
@@ -59,6 +63,11 @@ public class MapSwitch : MonoBehaviour
                     //238,255,170,255
                     c.backgroundColor=new Vector4(238/255f,1f,170/255f,1f);
                 break;
+            }
+            if(gameManager.GetComponent<GameManager>().hasStarted){
+                if(startTime>endTime){
+                    startTime=startTime-decrement;
+                }
             }
         }
     }
