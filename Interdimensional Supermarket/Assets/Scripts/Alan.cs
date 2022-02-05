@@ -19,7 +19,15 @@ public class Alan : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D target) {
         if(target.gameObject.tag == "Coin") {
-            Destroy(target.gameObject);
+            // Destroy(target.gameObject);
+            // target.gameObject.transform.position = new Vector3(5,5);
+            int x, y;
+            Vector3 newPos;
+            x = Random.Range(0, 7);
+            y = Random.Range(0, -7);
+            newPos = new Vector3(x, y); 
+            target.transform.position = newPos;
+
             points += 1;
         }
         Text txt = GameObject.FindWithTag("coinText").GetComponent<Text>();
