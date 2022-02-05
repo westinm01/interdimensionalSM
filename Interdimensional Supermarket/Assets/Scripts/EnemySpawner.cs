@@ -9,6 +9,7 @@ public class EnemySpawner : MonoBehaviour
     public GameObject Fuzlin;
     public GameObject EyeGuy;
     public GameObject[] enemies;    // Initialize to 1 of each kind of enemy
+    // private GameManager gm;
 
     /*
         Checks if there is an existing enemy on the input position
@@ -24,8 +25,8 @@ public class EnemySpawner : MonoBehaviour
         }
         return false;
     }
-    void Start()
-    {
+
+    public void InitializeEnemies(){
         int randX = 0;
         int randY = 0;
         bool hasConflict;
@@ -58,5 +59,9 @@ public class EnemySpawner : MonoBehaviour
             }
             enemies[i] = Instantiate(enemy, new Vector3(randX, randY), Quaternion.identity, transform.parent);
         }
+    }
+    void Start()
+    {
+        // gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
     }
 }
