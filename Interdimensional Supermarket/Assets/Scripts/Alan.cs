@@ -12,7 +12,9 @@ public class Alan : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D target) {
-        Debug.Log("HASDASDASD");
+        if(target.gameObject.tag == "Coin") {
+            Destroy(target.gameObject);
+        }
     }
 
     // Update is called once per frame
