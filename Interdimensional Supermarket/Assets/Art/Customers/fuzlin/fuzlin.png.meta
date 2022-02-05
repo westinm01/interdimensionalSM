@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 811dab537b292a54683c2ae4b2623872
+guid: 2956722a94b27f94fb0a8a019b296111
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3893425157493547525
-    second: Pokoon_0
+      213: -7173903249579977952
+    second: fuzlin_0
   - first:
-      213: 6269545394926468280
-    second: Pokoon_1
+      213: -7176490993957263720
+    second: fuzlin_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -52,7 +52,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -121,7 +121,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pokoon_0
+      name: fuzlin_0
       rect:
         serializedVersion: 2
         x: 0
@@ -135,14 +135,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfd17009276c7f9c0800000000000000
-      internalID: -3893425157493547525
+      spriteID: 023d3c3e00d217c90800000000000000
+      internalID: -7173903249579977952
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pokoon_1
+      name: fuzlin_1
       rect:
         serializedVersion: 2
         x: 32
@@ -156,8 +156,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8bc37c7b156e10750800000000000000
-      internalID: 6269545394926468280
+      spriteID: 8962363b67bf76c90800000000000000
+      internalID: -7176490993957263720
       vertices: []
       indices: 
       edges: []
