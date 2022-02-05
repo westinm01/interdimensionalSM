@@ -32,8 +32,10 @@ public class Alan : MonoBehaviour
         }
         Text txt = GameObject.FindWithTag("coinText").GetComponent<Text>();
         txt.text = "Score: " + points;
+        if(target.gameObject.tag== "Customer"){
+            Debug.Log("Game Over");
+        }
     }
-
     // Update is called once per frame
     void Update()
     {
