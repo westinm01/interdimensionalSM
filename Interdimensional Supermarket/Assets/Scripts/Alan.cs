@@ -11,7 +11,7 @@ public class Alan : MonoBehaviour
         t=gameObject.transform;
     }
 
-    void OnCollisionEnter(Collision collision) {
+    void OnTriggerEnter2D(Collider2D target) {
         Debug.Log("HASDASDASD");
     }
 
