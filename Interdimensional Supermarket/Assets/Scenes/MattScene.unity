@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &442613861
 Transform:
   m_ObjectHideFlags: 0
@@ -1787,7 +1787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1444454194
 Transform:
   m_ObjectHideFlags: 0
@@ -2552,6 +2552,24 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1859531941 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9045241629303533889, guid: 818b498cc912df24b93f5f251aea56bf, type: 3}
+  m_PrefabInstance: {fileID: 9045241631048375445}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1859531942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859531941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f315a3fc13d2c5b4ea28943fd31c87bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveFrequency: 1
 --- !u!1 &1918264103
 GameObject:
   m_ObjectHideFlags: 0
@@ -2766,6 +2784,10 @@ PrefabInstance:
     - target: {fileID: 4499409175613975310, guid: 5ef70de735dd0c341925da5abc68a338, type: 3}
       propertyPath: m_Name
       value: coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 4499409175613975310, guid: 5ef70de735dd0c341925da5abc68a338, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ef70de735dd0c341925da5abc68a338, type: 3}
