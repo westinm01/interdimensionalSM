@@ -10,12 +10,27 @@ public class Alan : MonoBehaviour
     public int points = 0;
     public Text highScoreText;
     public Animator anim;
+    private GameManager gm;
+    private Text txt;
     // Start is called before the first frame update
     void Start()
     {
+        txt = GameObject.FindWithTag("coinText").GetComponent<Text>(); 
         t=gameObject.transform;
         anim=gameObject.GetComponent<Animator>();
-        
+        gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+        Spawn();
+    }
+
+    public void Spawn(){
+        ResetPosition();
+        points = 0;
+        highScoreText.text = "High score: " + StaticBoard.highScore;
+        txt.text = "Score: " + points;
+    }
+
+    void ResetPosition(){
+        gameObject.transform.position = new Vector3(0, 0);
     }
 
     void OnTriggerEnter2D(Collider2D target) {
@@ -34,15 +49,20 @@ public class Alan : MonoBehaviour
                 StaticBoard.highScore = points;
             }
 
-            Text txt = GameObject.FindWithTag("coinText").GetComponent<Text>();
             txt.text = "Score: " + points;
             highScoreText.text = "High score: " + StaticBoard.highScore;
+        }
+        if (target.gameObject.tag == "Customer"){
+            gm.EndGame();
         }
     }
     // Update is called once per frame
     void Update()
     {
-        
+        if (!gm.hasStarted){
+            return;
+        }
+
         if(Input.GetKeyDown("up") && t.position.y<0){
             t.position+= new Vector3(0,1);
             isUp=true;

@@ -24,9 +24,9 @@ public class CustomerMovement : MonoBehaviour
         StaticBoard.occupiedPositions[staticBoardPos, 0] = (int)gameObject.transform.position.x;
         StaticBoard.occupiedPositions[staticBoardPos, 1] = (int)gameObject.transform.position.y;
 
-        Debug.Log(gameObject.name + " pos: ");
-        Debug.Log(StaticBoard.occupiedPositions[staticBoardPos, 0]);
-        Debug.Log(StaticBoard.occupiedPositions[staticBoardPos, 1]);
+        // Debug.Log(gameObject.name + " pos: ");
+        // Debug.Log(StaticBoard.occupiedPositions[staticBoardPos, 0]);
+        // Debug.Log(StaticBoard.occupiedPositions[staticBoardPos, 1]);
     }
 
     protected virtual void Start()
