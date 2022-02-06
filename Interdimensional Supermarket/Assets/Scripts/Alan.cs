@@ -71,6 +71,16 @@ public class Alan : MonoBehaviour
         if (!gm.hasStarted){
             return;
         }
+        if(Input.GetKeyDown("space")) {
+            if(activeBolt) {
+                Debug.Log("POWER");
+                GameObject[] g = GameObject.FindGameObjectsWithTag("Customer");
+                foreach(GameObject e in g) {
+                    e.transform.position = new Vector2(e.transform.position.x, 0);
+                }
+                activeBolt = false;
+            }
+        }
 
         if((Input.GetKeyDown("up") || Input.GetKeyDown("w") )&& t.position.y<0){
             t.position+= new Vector3(0,1);

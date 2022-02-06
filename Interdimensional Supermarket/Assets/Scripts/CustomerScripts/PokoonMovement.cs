@@ -5,7 +5,10 @@ using UnityEngine;
 public class PokoonMovement : CustomerMovement
 {
     private int direction;
+
+
     public override void move(){
+   
         Vector3 oldPos = gameObject.transform.position;
         float xPos = Mathf.Round(oldPos.x);
         // bool rightBlocked = CheckOccupied(new Vector2(xPos + 1, oldPos.y));

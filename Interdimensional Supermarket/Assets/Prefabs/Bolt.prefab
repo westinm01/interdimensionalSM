@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -6453661864191054718}
   m_Layer: 0
   m_Name: Bolt
-  m_TagString: Customer
+  m_TagString: Bolt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
