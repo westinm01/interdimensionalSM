@@ -65,6 +65,14 @@ public class Alan : MonoBehaviour
         if (!gm.hasStarted){
             return;
         }
+        if(Input.GetKeyDown("space")) {
+            if(activeBolt) {
+                Debug.Log("POWER");
+                // PokoonMovement.frozen = true;
+                Debug.Log(PokoonMovement.Instance.isFrozen);
+                activeBolt = false;
+            }
+        }
 
         if(Input.GetKeyDown("up") && t.position.y<0){
             t.position+= new Vector3(0,1);

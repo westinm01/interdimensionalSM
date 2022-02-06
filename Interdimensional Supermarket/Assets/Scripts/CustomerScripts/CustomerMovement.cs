@@ -9,8 +9,19 @@ public class CustomerMovement : MonoBehaviour
     public int staticBoardPos;
     private Rigidbody2D rb;
     private float moveTimer;
+
+    private static CustomerMovement instance;
+
+    public CustomerMovement() {
+        instance = this;
+    }
+
+    public static CustomerMovement Instance {
+        get { return instance; }
+    }
+
     public virtual void move(){
-        gameObject.transform.position += new Vector3(1,0);
+         gameObject.transform.position += new Vector3(1,0);
     }
     public bool CheckOccupied(Vector2 pos){
         for (int i=0; i < StaticBoard.numEnemies; i++){
@@ -38,7 +49,7 @@ public class CustomerMovement : MonoBehaviour
 
     void Update()
     {
-        if (moveTimer > moveFrequency){
+        if (!this.isFrozen && moveTimer > moveFrequency){
             move();
             UpdateBoardPos();
             moveTimer = 0;
