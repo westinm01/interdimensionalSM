@@ -13,6 +13,22 @@ public class PowerupSpawner : MonoBehaviour
     public Powerup spawnedCoup;
     private float spawnTimer = 0;
 
+    public void ClearPowerups(){
+        if (spawnedSlushie != null){
+            Destroy(spawnedSlushie.gameObject);
+        }
+        if (spawnedBolt != null){
+            Destroy(spawnedBolt.gameObject);
+        }
+        if (spawnedCoup != null){
+            Destroy(spawnedCoup.gameObject);
+        }
+    }
+
+    public void ResetTimer(){
+        spawnTimer = 0;
+    }
+
     void Start(){
         gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
     }
