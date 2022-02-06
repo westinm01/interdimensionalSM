@@ -16,7 +16,7 @@ public class Alan : MonoBehaviour
     public TextMeshProUGUI CouponUses;
     private GameManager gm;
     private Text txt;
-    private AudioSource alanAudio;
+    private AudioSource alanAudio, powerupAudio;
     // Start is called before the first frame update
     public static bool activeBolt = false;
     void Start()
@@ -26,6 +26,7 @@ public class Alan : MonoBehaviour
         anim=gameObject.GetComponent<Animator>();
         gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
         alanAudio = gameObject.GetComponent<AudioSource>();
+        powerupAudio = GameObject.FindGameObjectWithTag("PickUpSound").GetComponent<AudioSource>();
         Spawn();
     }
 
@@ -63,6 +64,7 @@ public class Alan : MonoBehaviour
             gm.EndGame();
         }
         else if (target.gameObject.tag == "Powerup"){
+            powerupAudio.Play();
             heldItem = target.gameObject.GetComponent<Powerup>();
             target.gameObject.transform.position = inventoryPos;
             if (target.gameObject.name == "coupon"){
