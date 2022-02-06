@@ -11,6 +11,14 @@ public class StaticBoard : MonoBehaviour
                                                                                         // index 1: Octole
                                                                                         // index 2: Fuzlin
                                                                                         // index 3: EyeGuy
+    public static string[,] board = {{"","","","","","","",""},
+                                    {"","","","","","","",""},
+                                    {"","","","","","","",""},
+                                    {"","","","","","","",""},
+                                    {"","","","","","","",""},
+                                    {"","","","","","","",""},
+                                    {"","","","","","","",""},
+                                    {"","","","","","","",""}};
     public static int numEnemies;
     public static int highScore;
     public static int[] AlanPos = {-1, -1};

@@ -12,6 +12,7 @@ public class Alan : MonoBehaviour
     public Animator anim;
     private GameManager gm;
     private Text txt;
+    private AudioSource alanAudio;
     // Start is called before the first frame update
     public static bool activeBolt = false;
     void Start()
@@ -20,6 +21,7 @@ public class Alan : MonoBehaviour
         t=gameObject.transform;
         anim=gameObject.GetComponent<Animator>();
         gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+        alanAudio = gameObject.GetComponent<AudioSource>();
         Spawn();
     }
 
@@ -44,7 +46,7 @@ public class Alan : MonoBehaviour
             y = Random.Range(0, -7);
             newPos = new Vector3(x, y); 
             target.transform.position = newPos;
-
+            alanAudio.Play();
             points += 1;
             if (points > StaticBoard.highScore){
                 StaticBoard.highScore = points;
