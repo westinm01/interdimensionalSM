@@ -6078,6 +6078,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: eyeguy
       objectReference: {fileID: 0}
+    - target: {fileID: 3521993318873848244, guid: 440b2990326bba74cabe8378c3bd2bbc, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6279351910337618887, guid: 440b2990326bba74cabe8378c3bd2bbc, type: 3}
       propertyPath: m_Enabled
       value: 0
