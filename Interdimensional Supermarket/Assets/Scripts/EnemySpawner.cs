@@ -8,7 +8,9 @@ public class EnemySpawner : MonoBehaviour
     public GameObject Octole;
     public GameObject Fuzlin;
     public GameObject EyeGuy;
+    public GameObject Coin;
     public GameObject[] enemies;    // Initialize to 1 of each kind of enemy
+    private GameObject gameCoin;
     // private GameManager gm;
 
     /*
@@ -24,6 +26,15 @@ public class EnemySpawner : MonoBehaviour
             }
         }
         return false;
+    }
+
+    public void ClearEnemies(){
+        foreach (GameObject enemy in enemies){
+            if (enemy != null){
+                Destroy(enemy.gameObject);
+            }
+        }
+        Destroy(gameCoin.gameObject);
     }
 
     public void InitializeEnemies(){
@@ -59,6 +70,11 @@ public class EnemySpawner : MonoBehaviour
             }
             enemies[i] = Instantiate(enemy, new Vector3(randX, randY), Quaternion.identity, transform.parent);
         }
+
+
+        randX = Random.Range(0, StaticBoard.numCols - 1);
+        randY = -Random.Range(0, StaticBoard.numRows - 1);
+        gameCoin = Instantiate(Coin, new Vector3(randX, randY), Quaternion.identity, transform.parent);
     }
     void Start()
     {
