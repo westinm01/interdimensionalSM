@@ -57,6 +57,9 @@ public class EnemySpawner : MonoBehaviour
                 randX = Random.Range(0, StaticBoard.numCols - 1);
                 randY = -Random.Range(0, StaticBoard.numRows - 1);
                 hasConflict = CheckPositionConflict(new Vector2(randX, randY));
+                if (randX == 0 && randY == 0){      // Don't spawn enemies on 0,0
+                    hasConflict = true;
+                }
             }
 
             switch(i){
