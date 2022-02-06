@@ -7,21 +7,19 @@ public class CustomerMovement : MonoBehaviour
     public float moveFrequency; // How often the enemy moves
     // public float walkSpeed;     // How fast the enemy moves
     public int staticBoardPos;
+    public int freezeCycles;
+    public GameObject alan;
     private Rigidbody2D rb;
     private float moveTimer;
-
-    private static CustomerMovement instance;
-
-    public CustomerMovement() {
-        instance = this;
-    }
-
-    public static CustomerMovement Instance {
-        get { return instance; }
-    }
-
+    private bool isFrozen;
+    private int freezeTimer;
     public virtual void move(){
          gameObject.transform.position += new Vector3(1,0);
+    }
+
+    public virtual void freeze(){
+        freezeTimer = 0;
+        isFrozen = true;
     }
     public bool CheckOccupied(Vector2 pos){
         for (int i=0; i < StaticBoard.numEnemies; i++){
@@ -44,15 +42,24 @@ public class CustomerMovement : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         moveTimer = 0;
+        alan = GameObject.FindGameObjectWithTag("Player");
     }
 
 
     void Update()
     {
-        if (!this.isFrozen && moveTimer > moveFrequency){
-            move();
-            UpdateBoardPos();
-            moveTimer = 0;
+        if (moveTimer > moveFrequency){
+            if (!isFrozen){
+                move();
+                UpdateBoardPos();
+                moveTimer = 0;
+            }
+            else{
+                freezeTimer++;
+                if (freezeTimer == freezeCycles){
+                    isFrozen = false;
+                }
+            }
         }
         else{
             moveTimer += Time.deltaTime;

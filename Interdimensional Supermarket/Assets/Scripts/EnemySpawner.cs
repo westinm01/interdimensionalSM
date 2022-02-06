@@ -27,17 +27,26 @@ public class EnemySpawner : MonoBehaviour
         }
         return false;
     }
-
+    public void FreezeEnemies(){
+        foreach (GameObject enemy in enemies){
+            if (enemy != null){
+                enemy.GetComponent<CustomerMovement>().freeze();
+            }
+        }
+    }
     public void ClearEnemies(){
         foreach (GameObject enemy in enemies){
             if (enemy != null){
                 Destroy(enemy.gameObject);
             }
         }
-        Destroy(gameCoin.gameObject);
+        if (gameCoin != null){
+            Destroy(gameCoin.gameObject);
+        }
     }
 
     public void InitializeEnemies(){
+        ClearEnemies();
         int randX = 0;
         int randY = 0;
         bool hasConflict;
@@ -48,6 +57,9 @@ public class EnemySpawner : MonoBehaviour
                 randX = Random.Range(0, StaticBoard.numCols - 1);
                 randY = -Random.Range(0, StaticBoard.numRows - 1);
                 hasConflict = CheckPositionConflict(new Vector2(randX, randY));
+                if (randX == 0 && randY == 0){      // Don't spawn enemies on 0,0
+                    hasConflict = true;
+                }
             }
 
             switch(i){

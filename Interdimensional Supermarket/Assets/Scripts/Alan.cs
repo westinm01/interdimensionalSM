@@ -74,18 +74,18 @@ public class Alan : MonoBehaviour
             }
         }
 
-        if(Input.GetKeyDown("up") && t.position.y<0){
+        if((Input.GetKeyDown("up") || Input.GetKeyDown("w") )&& t.position.y<0){
             t.position+= new Vector3(0,1);
             isUp=true;
         }
-        else if(Input.GetKeyDown("down")&& t.position.y>-1*StaticBoard.numRows+1){
+        else if((Input.GetKeyDown("down") || Input.GetKeyDown("s") )&& t.position.y>-1*StaticBoard.numRows+1){
             t.position+= new Vector3(0,-1);
             isUp=false;
         }
-        else if(Input.GetKeyDown("right") && t.position.x<StaticBoard.numCols-1){
+        else if((Input.GetKeyDown("right") || Input.GetKeyDown("d") ) && t.position.x<StaticBoard.numCols-1){
             t.position+= new Vector3(1,0);
         }
-        else if(Input.GetKeyDown("left")&&t.position.x>0){
+        else if((Input.GetKeyDown("left") || Input.GetKeyDown("a") )&&t.position.x>0){
             t.position+= new Vector3(-1,0);
         }
         anim.SetBool("isUp",isUp);
