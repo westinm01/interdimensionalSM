@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
         blueSpawner.InitializeEnemies();
         redSpawner.InitializeEnemies();
         yellowSpawner.InitializeEnemies();
-        Time.timeScale = 1;
+        // Time.timeScale = 1;
         switcher.state = 0;
         switcher.timer = 0;
         switcher.UpdateStates();
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
         redSpawner.ClearEnemies();
         yellowSpawner.ClearEnemies();
         gameOverScreen.SetActive(true);
-        Time.timeScale = 0;
+        // Time.timeScale = 0;
     }
 
     void Start(){
