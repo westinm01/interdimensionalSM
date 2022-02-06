@@ -818,26 +818,14 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 311877792}
-    - target: {fileID: 946773958, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -271.3
-      objectReference: {fileID: 0}
     - target: {fileID: 946773959, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 419594281}
-    - target: {fileID: 1458853206, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -271.3
-      objectReference: {fileID: 0}
     - target: {fileID: 1458853207, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 963194230}
-    - target: {fileID: 1649317001, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 850426092737708693, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -934,34 +922,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 850426093029259638, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
-      propertyPath: m_PresetInfoIsWorld
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 850426093029259639, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 963194227}
-    - target: {fileID: 3889667512232791174, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 7126470968971791604, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1999047629957421721, guid: 164ca7eddf1c28e4bad73f95393faef7, type: 3}
-    - target: {fileID: 7126470968971791604, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: MoveCameraRight
-      objectReference: {fileID: 0}
-    - target: {fileID: 8647726360104868098, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1999047629957421721, guid: 164ca7eddf1c28e4bad73f95393faef7, type: 3}
-    - target: {fileID: 8647726360104868098, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: MoveCameraLeft
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
 --- !u!1 &850426093385985081 stripped

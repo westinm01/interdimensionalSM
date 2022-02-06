@@ -50,6 +50,7 @@ MonoBehaviour:
   yellowSpawner: {fileID: 0}
   gameOverScreen: {fileID: 0}
   switcher: {fileID: 0}
+  ps: {fileID: 0}
 --- !u!82 &3362998210440928537
 AudioSource:
   m_ObjectHideFlags: 0
