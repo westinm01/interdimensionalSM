@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9045241629303533891}
   - component: {fileID: 9045241629303533901}
   - component: {fileID: 8382976839343320154}
+  - component: {fileID: -6453661864191054718}
   m_Layer: 0
   m_Name: Bolt
   m_TagString: Customer
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9045241629303533889}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: -6, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -131,3 +132,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-6453661864191054718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9045241629303533889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10a7ac2ec82fd5d4b92e9fc39b69f1ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -10,6 +10,7 @@ public class Alan : MonoBehaviour
     public int points = 0;
     public Animator anim;
     // Start is called before the first frame update
+    public static bool activeBolt = false;
     void Start()
     {
         t=gameObject.transform;
