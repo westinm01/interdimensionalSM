@@ -7,10 +7,18 @@ public class CustomerMovement : MonoBehaviour
     public float moveFrequency; // How often the enemy moves
     // public float walkSpeed;     // How fast the enemy moves
     public int staticBoardPos;
+    public int freezeCycles;
     private Rigidbody2D rb;
     private float moveTimer;
+    private bool isFrozen;
+    private int freezeTimer;
     public virtual void move(){
         gameObject.transform.position += new Vector3(1,0);
+    }
+
+    public virtual void freeze(){
+        freezeTimer = 0;
+        isFrozen = true;
     }
     public bool CheckOccupied(Vector2 pos){
         for (int i=0; i < StaticBoard.numEnemies; i++){
@@ -39,9 +47,17 @@ public class CustomerMovement : MonoBehaviour
     void Update()
     {
         if (moveTimer > moveFrequency){
-            move();
-            UpdateBoardPos();
-            moveTimer = 0;
+            if (!isFrozen){
+                move();
+                UpdateBoardPos();
+                moveTimer = 0;
+            }
+            else{
+                freezeTimer++;
+                if (freezeTimer == freezeCycles){
+                    isFrozen = false;
+                }
+            }
         }
         else{
             moveTimer += Time.deltaTime;
