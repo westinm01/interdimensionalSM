@@ -2,27 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoltScript : MonoBehaviour
+public class BoltScript : Powerup
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    void OnTriggerEnter2D(Collider2D target) {
-        if(target.gameObject.tag == "Player") {
-            GameObject.FindWithTag("Player");
-            Alan.activeBolt = true;
-            Debug.Log("BOLT ACTIVE");
-            Destroy(gameObject);
+    public override void Use(){
+        GameObject[] g = GameObject.FindGameObjectsWithTag("Customer");
+        foreach(GameObject e in g) {
+            e.transform.position = new Vector2(0, 0);
         }
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Destroy(this.gameObject);
     }
 }

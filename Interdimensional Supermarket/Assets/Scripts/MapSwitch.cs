@@ -10,6 +10,8 @@ public class MapSwitch : MonoBehaviour
     public GameObject yellowmap;
     public GameObject gameManager;
     public Powerup slushie;
+    public Powerup bolt;
+    public Powerup coupon;
     public float startTime;
     public float endTime;
     public float decrement;
@@ -54,6 +56,7 @@ public class MapSwitch : MonoBehaviour
                 bluemap.SetActive(false);
                 redmap.SetActive(true);
                 yellowmap.SetActive(false);
+                spawner.power = bolt;
                 //255,160,129,255
                 c.backgroundColor=new Vector4(1f,160/255f,129/255f,1f);
             break;
@@ -61,6 +64,7 @@ public class MapSwitch : MonoBehaviour
                 bluemap.SetActive(false);
                 redmap.SetActive(false);
                 yellowmap.SetActive(true);
+                spawner.power = coupon;
                 //238,255,170,255
                 c.backgroundColor=new Vector4(238/255f,1f,170/255f,1f);
             break;

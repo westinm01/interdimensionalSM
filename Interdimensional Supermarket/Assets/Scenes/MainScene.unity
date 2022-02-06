@@ -436,6 +436,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1470056466, guid: a573da2db390743458f57a1cb0ab5b53, type: 3}
+      propertyPath: spawnSpeed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 7871729167781616145, guid: a573da2db390743458f57a1cb0ab5b53, type: 3}
       propertyPath: c
       value: 
@@ -521,6 +525,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3362998210440928532, guid: 29524e3e8011edc40a87b38fc337739d, type: 3}
   m_PrefabInstance: {fileID: 3362998210289835315}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1810324731 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1810324731, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
+  m_PrefabInstance: {fileID: 850426093385985080}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1813353874 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1223053224, guid: a573da2db390743458f57a1cb0ab5b53, type: 3}
@@ -726,10 +741,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1999047629957421721, guid: 164ca7eddf1c28e4bad73f95393faef7, type: 3}
-      propertyPath: moveSpeed
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 1999047629957421723, guid: 164ca7eddf1c28e4bad73f95393faef7, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -790,10 +801,6 @@ PrefabInstance:
     - target: {fileID: 3362998210440928532, guid: 29524e3e8011edc40a87b38fc337739d, type: 3}
       propertyPath: m_Name
       value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 3362998210440928537, guid: 29524e3e8011edc40a87b38fc337739d, type: 3}
-      propertyPath: m_Volume
-      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 3362998210440928538, guid: 29524e3e8011edc40a87b38fc337739d, type: 3}
       propertyPath: switcher
@@ -869,25 +876,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -2876959292617229598, guid: e608fdc20cca9a24d9372aa2c80d48d8, type: 3}
+      propertyPath: CouponUses
+      value: 
+      objectReference: {fileID: 1810324731}
+    - target: {fileID: -2876959292617229598, guid: e608fdc20cca9a24d9372aa2c80d48d8, type: 3}
       propertyPath: highScoreText
       value: 
       objectReference: {fileID: 1392463182}
-    - target: {fileID: 4478894599480197840, guid: e608fdc20cca9a24d9372aa2c80d48d8, type: 3}
-      propertyPath: m_Size.x
-      value: 0.89062226
-      objectReference: {fileID: 0}
-    - target: {fileID: 4478894599480197840, guid: e608fdc20cca9a24d9372aa2c80d48d8, type: 3}
-      propertyPath: m_Size.y
-      value: 0.9114561
-      objectReference: {fileID: 0}
-    - target: {fileID: 4478894599480197840, guid: e608fdc20cca9a24d9372aa2c80d48d8, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.0026042461
-      objectReference: {fileID: 0}
-    - target: {fileID: 4478894599480197840, guid: e608fdc20cca9a24d9372aa2c80d48d8, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.0026042461
-      objectReference: {fileID: 0}
     - target: {fileID: 4478894599480197843, guid: e608fdc20cca9a24d9372aa2c80d48d8, type: 3}
       propertyPath: m_RootOrder
       value: 7
