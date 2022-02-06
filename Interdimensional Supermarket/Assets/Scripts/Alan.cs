@@ -68,8 +68,10 @@ public class Alan : MonoBehaviour
         if(Input.GetKeyDown("space")) {
             if(activeBolt) {
                 Debug.Log("POWER");
-                // PokoonMovement.frozen = true;
-                Debug.Log(PokoonMovement.Instance.isFrozen);
+                GameObject[] g = GameObject.FindGameObjectsWithTag("Customer");
+                foreach(GameObject e in g) {
+                    e.transform.position = new Vector2(e.transform.position.x, 0);
+                }
                 activeBolt = false;
             }
         }

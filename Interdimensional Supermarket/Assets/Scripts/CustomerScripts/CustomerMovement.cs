@@ -12,6 +12,7 @@ public class CustomerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private float moveTimer;
     private bool isFrozen;
+    private bool isBolted;
     private int freezeTimer;
     public virtual void move(){
          gameObject.transform.position += new Vector3(1,0);
