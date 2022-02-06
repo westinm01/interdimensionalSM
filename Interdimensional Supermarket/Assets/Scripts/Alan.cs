@@ -95,6 +95,9 @@ public class Alan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown("u")) {
+            points += 50;
+        }
         if (!gm.hasStarted){
             return;
         }
