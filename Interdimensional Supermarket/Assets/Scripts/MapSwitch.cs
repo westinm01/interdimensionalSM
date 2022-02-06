@@ -59,7 +59,7 @@ public class MapSwitch : MonoBehaviour
                 redmap.SetActive(true);
                 yellowmap.SetActive(false);
                 spawner.currMap = redmap;
-                spawner.power = bolt;
+                spawner.power = coupon;
                 //255,160,129,255
                 c.backgroundColor=new Vector4(1f,160/255f,129/255f,1f);
             break;
@@ -68,7 +68,7 @@ public class MapSwitch : MonoBehaviour
                 redmap.SetActive(false);
                 yellowmap.SetActive(true);
                 spawner.currMap = yellowmap;
-                spawner.power = coupon;
+                spawner.power = bolt;
                 //238,255,170,255
                 c.backgroundColor=new Vector4(238/255f,1f,170/255f,1f);
             break;
