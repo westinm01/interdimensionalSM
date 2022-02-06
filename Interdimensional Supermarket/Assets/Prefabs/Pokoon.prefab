@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: -3893425157493547525, guid: 811dab537b292a54683c2ae4b2623872, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -166,3 +166,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveFrequency: 1
   staticBoardPos: 0
+  freezeCycles: 0
+  alan: {fileID: 0}
