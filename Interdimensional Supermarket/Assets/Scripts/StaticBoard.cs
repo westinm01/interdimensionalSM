@@ -13,4 +13,5 @@ public class StaticBoard : MonoBehaviour
                                                                                         // index 3: EyeGuy
     public static int numEnemies;
     public static int highScore;
+    public static int[] AlanPos = {-1, -1};
 }

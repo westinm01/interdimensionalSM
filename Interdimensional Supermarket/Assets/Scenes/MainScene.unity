@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -249,6 +249,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a573da2db390743458f57a1cb0ab5b53, type: 3}
+--- !u!114 &1542356914 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7871729167781616145, guid: a573da2db390743458f57a1cb0ab5b53, type: 3}
+  m_PrefabInstance: {fileID: 1542356913}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a33e092fd8584541827289440d55d0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1646843185 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1884224058, guid: a573da2db390743458f57a1cb0ab5b53, type: 3}
@@ -283,14 +294,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 946773959, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 419594281}
+    - target: {fileID: 946773959, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: StartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1458853207, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 963194230}
+    - target: {fileID: 1458853207, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MoveCameraUp
+      objectReference: {fileID: 0}
     - target: {fileID: 850426092737708693, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 419594281}
     - target: {fileID: 850426092737708693, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 963194230}
+    - target: {fileID: 850426092737708693, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 963194230}
+    - target: {fileID: 850426092737708693, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: MoveCameraDown
+      objectReference: {fileID: 0}
     - target: {fileID: 850426093029259624, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -385,6 +420,11 @@ PrefabInstance:
       objectReference: {fileID: 963194227}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
+--- !u!1 &850426093385985081 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1649317001, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
+  m_PrefabInstance: {fileID: 850426093385985080}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1999047629842675695
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -458,6 +498,10 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 3362998210440928538, guid: 29524e3e8011edc40a87b38fc337739d, type: 3}
+      propertyPath: switcher
+      value: 
+      objectReference: {fileID: 1542356914}
+    - target: {fileID: 3362998210440928538, guid: 29524e3e8011edc40a87b38fc337739d, type: 3}
       propertyPath: redSpawner
       value: 
       objectReference: {fileID: 1813353874}
@@ -469,6 +513,10 @@ PrefabInstance:
       propertyPath: yellowSpawner
       value: 
       objectReference: {fileID: 1646843185}
+    - target: {fileID: 3362998210440928538, guid: 29524e3e8011edc40a87b38fc337739d, type: 3}
+      propertyPath: gameOverScreen
+      value: 
+      objectReference: {fileID: 850426093385985081}
     - target: {fileID: 3362998210440928539, guid: 29524e3e8011edc40a87b38fc337739d, type: 3}
       propertyPath: m_RootOrder
       value: 8
