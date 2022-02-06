@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2570,6 +2570,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 963194230}
+    - target: {fileID: 850426092734097536, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 850426092734097536, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -100
+      objectReference: {fileID: 0}
     - target: {fileID: 850426092737708693, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2578,6 +2586,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 963194230}
+    - target: {fileID: 850426092822238526, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 850426092822238526, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 850426092822238526, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 850426093029259624, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2670,6 +2690,18 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 850426094003632223, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 850426094003632223, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 850426094292011394, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7126470968971791604, guid: eadb2923f18bdfd439f121a3c49860ef, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2850,6 +2882,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2876959292617229598, guid: e608fdc20cca9a24d9372aa2c80d48d8, type: 3}
+      propertyPath: bolt
+      value: 
+      objectReference: {fileID: -6453661864191054718, guid: 931a086a781f0844a80baacdd563e484, type: 3}
+    - target: {fileID: -2876959292617229598, guid: e608fdc20cca9a24d9372aa2c80d48d8, type: 3}
+      propertyPath: coupon
+      value: 
+      objectReference: {fileID: 4549414526107981133, guid: 77bb4853e89c0d644b4bece922ace1b7, type: 3}
+    - target: {fileID: -2876959292617229598, guid: e608fdc20cca9a24d9372aa2c80d48d8, type: 3}
+      propertyPath: slushie
+      value: 
+      objectReference: {fileID: 9163464109867509949, guid: a24c2f72d8d9f554e814690b66adda2e, type: 3}
     - target: {fileID: -2876959292617229598, guid: e608fdc20cca9a24d9372aa2c80d48d8, type: 3}
       propertyPath: CouponUses
       value: 
