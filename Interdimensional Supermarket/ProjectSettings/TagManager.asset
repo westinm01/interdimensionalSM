@@ -11,6 +11,7 @@ TagManager:
   - EnemyChecker
   - Bolt
   - BoltSound
+  - PickUpSound
   layers:
   - Default
   - TransparentFX
