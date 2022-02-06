@@ -34,6 +34,7 @@ public class MapSwitch : MonoBehaviour
         }*/
         //c=GetComponent<Camera>();
         spawner.power = slushie;
+        spawner.currMap = bluemap;
         redmap.SetActive(false);
         yellowmap.SetActive(false);
         state=0;
@@ -47,6 +48,7 @@ public class MapSwitch : MonoBehaviour
                 bluemap.SetActive(true);
                 redmap.SetActive(false);
                 yellowmap.SetActive(false);
+                spawner.currMap = bluemap;
                 spawner.power = slushie;
                 //175,178,255,255
                 c.backgroundColor=new Vector4(175/255f,178/255f,1f,1f);
@@ -56,7 +58,8 @@ public class MapSwitch : MonoBehaviour
                 bluemap.SetActive(false);
                 redmap.SetActive(true);
                 yellowmap.SetActive(false);
-                spawner.power = bolt;
+                spawner.currMap = redmap;
+                spawner.power = coupon;
                 //255,160,129,255
                 c.backgroundColor=new Vector4(1f,160/255f,129/255f,1f);
             break;
@@ -64,7 +67,8 @@ public class MapSwitch : MonoBehaviour
                 bluemap.SetActive(false);
                 redmap.SetActive(false);
                 yellowmap.SetActive(true);
-                spawner.power = coupon;
+                spawner.currMap = yellowmap;
+                spawner.power = bolt;
                 //238,255,170,255
                 c.backgroundColor=new Vector4(238/255f,1f,170/255f,1f);
             break;
