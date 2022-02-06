@@ -21,12 +21,14 @@ public class GameManager : MonoBehaviour
         // Time.timeScale = 1;
         switcher.state = 0;
         switcher.timer = 0;
+        switcher.startTime = switcher.initialStartTime;
         switcher.UpdateStates();
         ps.ClearPowerups();
         ps.ResetTimer();
         if (alan.heldItem != null){
             Destroy(alan.heldItem.gameObject);
         }
+        alan.DisableCouponCounter();
         alan.Spawn();
     }
     public void EndGame(){
