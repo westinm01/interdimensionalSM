@@ -62,7 +62,7 @@ public class PowerupSpawner : MonoBehaviour
             spawnTimer = 0;
         }
         else if (gm.hasStarted){
-            spawnTimer += Time.deltaTime + Random.Range(0, 0.01f);
+            spawnTimer += Time.deltaTime + Random.Range(0, 0.025f);
         }
     }
 }
