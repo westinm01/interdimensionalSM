@@ -11,6 +11,7 @@ public class MapSwitch : MonoBehaviour
     public GameObject gameManager;
     public Powerup slushie;
     public Powerup bolt;
+    public Powerup coupon;
     public float startTime;
     public float endTime;
     public float decrement;
@@ -63,6 +64,7 @@ public class MapSwitch : MonoBehaviour
                 bluemap.SetActive(false);
                 redmap.SetActive(false);
                 yellowmap.SetActive(true);
+                spawner.power = coupon;
                 //238,255,170,255
                 c.backgroundColor=new Vector4(238/255f,1f,170/255f,1f);
             break;
