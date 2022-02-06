@@ -13,6 +13,7 @@ public class Alan : MonoBehaviour
     private GameManager gm;
     private Text txt;
     // Start is called before the first frame update
+    public static bool activeBolt = false;
     void Start()
     {
         txt = GameObject.FindWithTag("coinText").GetComponent<Text>(); 
