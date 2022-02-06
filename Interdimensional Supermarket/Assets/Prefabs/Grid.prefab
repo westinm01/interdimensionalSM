@@ -4845,6 +4845,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bolt
       objectReference: {fileID: 0}
+    - target: {fileID: 9045241629303533889, guid: 931a086a781f0844a80baacdd563e484, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9045241629303533890, guid: 931a086a781f0844a80baacdd563e484, type: 3}
       propertyPath: m_RootOrder
       value: 1
