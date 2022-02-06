@@ -21,6 +21,9 @@ public class GameManager : MonoBehaviour
         switcher.state = 0;
         switcher.timer = 0;
         switcher.UpdateStates();
+        if (alan.heldItem != null){
+            Destroy(alan.heldItem.gameObject);
+        }
         alan.Spawn();
     }
     public void EndGame(){
