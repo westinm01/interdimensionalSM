@@ -13,12 +13,12 @@ public class PowerupSpawner : MonoBehaviour
     void Update()
     {
         if (spawnTimer >= spawnSpeed){
-            if (spawnedP == null){          // Doesn't spawn an item if already on board.
+            // if (spawnedP == null){          // Doesn't spawn an item if already on board.
                 int randX = Random.Range(0, StaticBoard.numCols - 1);
                 int randY = -Random.Range(0, StaticBoard.numRows - 1);
                 spawnedP = Instantiate(power, new Vector3(randX, randY), Quaternion.identity);
                 spawnTimer = 0;
-            }
+            // }
         }
         else{
             spawnTimer += Time.deltaTime;

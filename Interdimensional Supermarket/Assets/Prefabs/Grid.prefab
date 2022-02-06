@@ -3666,6 +3666,7 @@ MonoBehaviour:
   yellowmap: {fileID: 0}
   gameManager: {fileID: 0}
   slushie: {fileID: 9163464109867509949, guid: a24c2f72d8d9f554e814690b66adda2e, type: 3}
+  bolt: {fileID: -6453661864191054718, guid: 931a086a781f0844a80baacdd563e484, type: 3}
   startTime: 1000
   endTime: 300
   decrement: 50
