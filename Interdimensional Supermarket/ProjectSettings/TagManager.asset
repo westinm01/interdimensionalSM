@@ -12,6 +12,7 @@ TagManager:
   - Bolt
   - BoltSound
   - PickUpSound
+  - gameoverSound
   layers:
   - Default
   - TransparentFX
