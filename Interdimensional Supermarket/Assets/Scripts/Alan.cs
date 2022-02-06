@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Alan : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Alan : MonoBehaviour
     public Animator anim;
     public Powerup heldItem;
     public Vector3 inventoryPos;
+    public TextMeshProUGUI CouponUses;
     private GameManager gm;
     private Text txt;
     private AudioSource alanAudio;
@@ -63,6 +65,11 @@ public class Alan : MonoBehaviour
         else if (target.gameObject.tag == "Powerup"){
             heldItem = target.gameObject.GetComponent<Powerup>();
             target.gameObject.transform.position = inventoryPos;
+            if (target.gameObject.name == "coupon"){
+                Debug.Log("Picked up coupon");
+                CouponUses.gameObject.SetActive(true);
+                CouponUses.text = "Uses: " + heldItem.GetComponent<CouponScript>().uses;
+            }
         }
     }
     // Update is called once per frame
@@ -97,7 +104,19 @@ public class Alan : MonoBehaviour
             t.position+= new Vector3(-1,0);
         }
         if (Input.GetKeyDown("f") && heldItem != null){
-            heldItem.Use();
+            if (heldItem.name == "coupon"){
+                if (heldItem.GetComponent<CouponScript>().uses == 1){
+                    CouponUses.gameObject.SetActive(false);
+                    heldItem.Use();
+                }
+                else{
+                    heldItem.Use();
+                    CouponUses.text = "Uses: " + heldItem.GetComponent<CouponScript>().uses;
+                }
+            }
+            else{
+                heldItem.Use();
+            }
         }
         anim.SetBool("isUp",isUp);
     }
