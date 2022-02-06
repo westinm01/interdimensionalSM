@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -2876959292617229598}
   - component: {fileID: 481155314047423321}
   - component: {fileID: 6997750083320389942}
+  - component: {fileID: 4414918079925458988}
   m_Layer: 0
   m_Name: Alan
   m_TagString: Player
@@ -151,9 +152,6 @@ MonoBehaviour:
   heldItem: {fileID: 0}
   inventoryPos: {x: -4, y: -2, z: 0}
   CouponUses: {fileID: 0}
-  slushie: {fileID: 9163464109867509949, guid: a24c2f72d8d9f554e814690b66adda2e, type: 3}
-  bolt: {fileID: -6453661864191054718, guid: 931a086a781f0844a80baacdd563e484, type: 3}
-  coupon: {fileID: 4549414526107981133, guid: 77bb4853e89c0d644b4bece922ace1b7, type: 3}
 --- !u!50 &481155314047423321
 Rigidbody2D:
   serializedVersion: 4
@@ -271,3 +269,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4414918079925458988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4478894599480197852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59a844b271fc7a04cb0ccff5a9d46fbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1287600332215562213, guid: 5a302abfb5edcac41ad43c81cb01d452, type: 3}

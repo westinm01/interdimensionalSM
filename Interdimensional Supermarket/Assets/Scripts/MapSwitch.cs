@@ -19,7 +19,7 @@ public class MapSwitch : MonoBehaviour
     public Camera c;
     [HideInInspector] public int state;
     private PowerupSpawner spawner;
-    private float initialStartTime;
+    [HideInInspector] public float initialStartTime;
     [HideInInspector]public float timer;
     void Start()
     {
@@ -81,7 +81,6 @@ public class MapSwitch : MonoBehaviour
         // Debug.Log(timer);
         timer++;
         // Debug.Log(state);
-
         if(timer>=startTime){
             timer=0;
             state=(state+1)%3;
@@ -91,10 +90,6 @@ public class MapSwitch : MonoBehaviour
                     startTime=startTime-decrement;
                 }
             }
-            else{
-                startTime = initialStartTime;
-            }
         }
-        
     }
 }

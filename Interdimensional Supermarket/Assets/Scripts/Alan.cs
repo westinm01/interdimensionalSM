@@ -40,6 +40,9 @@ public class Alan : MonoBehaviour
         highScoreText.text = "High score: " + StaticBoard.highScore;
         txt.text = "Score: " + points;
     }
+    public void DisableCouponCounter(){
+        CouponUses.gameObject.SetActive(false);
+    }
 
     void ResetPosition(){
         gameObject.transform.position = new Vector3(0, 0);
@@ -83,6 +86,7 @@ public class Alan : MonoBehaviour
                     break;
                 case "coupon(Clone)":
                     heldItem = Instantiate(coupon, inventoryPos, Quaternion.identity);
+                    Debug.Log(heldItem.name);
                     CouponUses.gameObject.SetActive(true);
                     CouponUses.text = "Uses: " + heldItem.GetComponent<CouponScript>().uses;
                     break;
@@ -95,6 +99,9 @@ public class Alan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown("u")) {
+            points += 50;
+        }
         if (!gm.hasStarted){
             return;
         }
@@ -124,9 +131,9 @@ public class Alan : MonoBehaviour
             t.position+= new Vector3(-1,0);
         }
         if (Input.GetKeyDown("f") && heldItem != null){
-            if (heldItem.name == "coupon"){
+            if (heldItem.name == "coupon(Clone)"){
                 if (heldItem.GetComponent<CouponScript>().uses == 1){
-                    CouponUses.gameObject.SetActive(false);
+                    DisableCouponCounter();
                     heldItem.Use();
                 }
                 else{
