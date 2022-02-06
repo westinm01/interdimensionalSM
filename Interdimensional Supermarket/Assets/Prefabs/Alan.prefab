@@ -148,6 +148,8 @@ MonoBehaviour:
   points: 0
   highScoreText: {fileID: 0}
   anim: {fileID: 0}
+  heldItem: {fileID: 0}
+  inventoryPos: {x: -4, y: -2, z: 0}
 --- !u!50 &481155314047423321
 Rigidbody2D:
   serializedVersion: 4
