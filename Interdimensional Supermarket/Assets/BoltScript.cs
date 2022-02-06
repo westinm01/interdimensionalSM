@@ -7,7 +7,7 @@ public class BoltScript : Powerup
     public override void Use(){
         GameObject[] g = GameObject.FindGameObjectsWithTag("Customer");
         foreach(GameObject e in g) {
-            e.transform.position = new Vector2(e.transform.position.x, 0);
+            e.transform.position = new Vector2(0, 0);
         }
         Destroy(this.gameObject);
     }
