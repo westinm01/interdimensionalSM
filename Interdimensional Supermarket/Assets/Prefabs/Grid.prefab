@@ -3689,6 +3689,9 @@ MonoBehaviour:
   power: {fileID: 0}
   gm: {fileID: 0}
   currMap: {fileID: 0}
+  spawnedSlushie: {fileID: 0}
+  spawnedBolt: {fileID: 0}
+  spawnedCoup: {fileID: 0}
 --- !u!1 &7871729168028205482
 GameObject:
   m_ObjectHideFlags: 0
