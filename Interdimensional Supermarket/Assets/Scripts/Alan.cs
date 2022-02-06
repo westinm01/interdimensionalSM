@@ -10,6 +10,8 @@ public class Alan : MonoBehaviour
     public int points = 0;
     public Text highScoreText;
     public Animator anim;
+    public Powerup heldItem;
+    public Vector3 inventoryPos;
     private GameManager gm;
     private Text txt;
     private AudioSource alanAudio;
@@ -58,6 +60,10 @@ public class Alan : MonoBehaviour
         if (target.gameObject.tag == "Customer"){
             gm.EndGame();
         }
+        else if (target.gameObject.tag == "Powerup"){
+            heldItem = target.gameObject.GetComponent<Powerup>();
+            target.gameObject.transform.position = inventoryPos;
+        }
     }
     // Update is called once per frame
     void Update()
@@ -79,6 +85,9 @@ public class Alan : MonoBehaviour
         }
         else if((Input.GetKeyDown("left") || Input.GetKeyDown("a") )&&t.position.x>0){
             t.position+= new Vector3(-1,0);
+        }
+        if (Input.GetKeyDown("f") && heldItem != null){
+            heldItem.Use();
         }
         anim.SetBool("isUp",isUp);
     }
