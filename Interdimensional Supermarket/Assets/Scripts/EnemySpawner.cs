@@ -27,17 +27,26 @@ public class EnemySpawner : MonoBehaviour
         }
         return false;
     }
-
+    public void FreezeEnemies(){
+        foreach (GameObject enemy in enemies){
+            if (enemy != null){
+                enemy.GetComponent<CustomerMovement>().freeze();
+            }
+        }
+    }
     public void ClearEnemies(){
         foreach (GameObject enemy in enemies){
             if (enemy != null){
                 Destroy(enemy.gameObject);
             }
         }
-        Destroy(gameCoin.gameObject);
+        if (gameCoin != null){
+            Destroy(gameCoin.gameObject);
+        }
     }
 
     public void InitializeEnemies(){
+        ClearEnemies();
         int randX = 0;
         int randY = 0;
         bool hasConflict;

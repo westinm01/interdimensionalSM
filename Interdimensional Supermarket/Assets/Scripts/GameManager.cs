@@ -25,9 +25,9 @@ public class GameManager : MonoBehaviour
     }
     public void EndGame(){
         hasStarted = false;
-        blueSpawner.ClearEnemies();
-        redSpawner.ClearEnemies();
-        yellowSpawner.ClearEnemies();
+        blueSpawner.FreezeEnemies();
+        redSpawner.FreezeEnemies();
+        yellowSpawner.FreezeEnemies();
         gameOverScreen.SetActive(true);
         // Time.timeScale = 0;
     }
