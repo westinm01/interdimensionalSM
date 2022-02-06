@@ -36,7 +36,7 @@ public class PowerupSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (spawnTimer >= 1){
+        if (spawnTimer >= spawnSpeed){
             int randX = Random.Range(0, StaticBoard.numCols - 1);
             int randY = -Random.Range(0, StaticBoard.numRows - 1);
             switch (currMap.name){
