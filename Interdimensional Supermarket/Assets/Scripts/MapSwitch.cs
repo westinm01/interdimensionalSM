@@ -8,10 +8,15 @@ public class MapSwitch : MonoBehaviour
     public GameObject redmap;
     public GameObject bluemap;
     public GameObject yellowmap;
+    public GameObject gameManager;
+    public float startTime;
+    public float endTime;
+    public float decrement;
     //public GameObject cam;
     public Camera c;
-    private int state;
-    private float timer;
+    [HideInInspector] public int state;
+    private float initialStartTime;
+    [HideInInspector]public float timer;
     void Start()
     {
         bluemap=gameObject.transform.GetChild(0).gameObject;
@@ -27,39 +32,56 @@ public class MapSwitch : MonoBehaviour
         yellowmap.SetActive(false);
         state=0;
         timer=0;
+        initialStartTime = startTime;
+    }
+
+    public void UpdateStates(){
+        switch(state){
+            case 0:
+                bluemap.SetActive(true);
+                redmap.SetActive(false);
+                yellowmap.SetActive(false);
+                //175,178,255,255
+                c.backgroundColor=new Vector4(175/255f,178/255f,1f,1f);
+                
+            break;
+            case 1:
+                bluemap.SetActive(false);
+                redmap.SetActive(true);
+                yellowmap.SetActive(false);
+                //255,160,129,255
+                c.backgroundColor=new Vector4(1f,160/255f,129/255f,1f);
+            break;
+            case 2:
+                bluemap.SetActive(false);
+                redmap.SetActive(false);
+                yellowmap.SetActive(true);
+                //238,255,170,255
+                c.backgroundColor=new Vector4(238/255f,1f,170/255f,1f);
+            break;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Debug.Log(timer);
         timer++;
-        if(timer==1000){
+        // Debug.Log(state);
+
+        if(timer>=startTime){
             timer=0;
             state=(state+1)%3;
-            switch(state){
-                case 0:
-                    bluemap.SetActive(true);
-                    redmap.SetActive(false);
-                    yellowmap.SetActive(false);
-                    //175,178,255,255
-                    c.backgroundColor=new Vector4(175/255f,178/255f,1f,1f);
-                    
-                break;
-                case 1:
-                    bluemap.SetActive(false);
-                    redmap.SetActive(true);
-                    yellowmap.SetActive(false);
-                    //255,160,129,255
-                    c.backgroundColor=new Vector4(1f,160/255f,129/255f,1f);
-                break;
-                case 2:
-                    bluemap.SetActive(false);
-                    redmap.SetActive(false);
-                    yellowmap.SetActive(true);
-                    //238,255,170,255
-                    c.backgroundColor=new Vector4(238/255f,1f,170/255f,1f);
-                break;
+            UpdateStates();
+            if(gameManager.GetComponent<GameManager>().hasStarted){
+                if(startTime>endTime){
+                    startTime=startTime-decrement;
+                }
+            }
+            else{
+                startTime = initialStartTime;
             }
         }
+        
     }
 }

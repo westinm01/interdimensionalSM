@@ -47,6 +47,7 @@ MonoBehaviour:
   Octole: {fileID: 6795231038780715469, guid: d55ca1f9629296547880df06d3ed8265, type: 3}
   Fuzlin: {fileID: 7392196853730270782, guid: 2e13b94fd16ccba4b92293b34f53b319, type: 3}
   EyeGuy: {fileID: 3521993318873848244, guid: 440b2990326bba74cabe8378c3bd2bbc, type: 3}
+  Coin: {fileID: 4499409175613975310, guid: 5ef70de735dd0c341925da5abc68a338, type: 3}
   enemies:
   - {fileID: 0}
   - {fileID: 0}
@@ -99,6 +100,7 @@ MonoBehaviour:
   Octole: {fileID: 6795231038780715469, guid: d55ca1f9629296547880df06d3ed8265, type: 3}
   Fuzlin: {fileID: 7392196853730270782, guid: 2e13b94fd16ccba4b92293b34f53b319, type: 3}
   EyeGuy: {fileID: 3521993318873848244, guid: 440b2990326bba74cabe8378c3bd2bbc, type: 3}
+  Coin: {fileID: 4499409175613975310, guid: 5ef70de735dd0c341925da5abc68a338, type: 3}
   enemies:
   - {fileID: 0}
   - {fileID: 0}
@@ -151,6 +153,7 @@ MonoBehaviour:
   Octole: {fileID: 6795231038780715469, guid: d55ca1f9629296547880df06d3ed8265, type: 3}
   Fuzlin: {fileID: 7392196853730270782, guid: 2e13b94fd16ccba4b92293b34f53b319, type: 3}
   EyeGuy: {fileID: 3521993318873848244, guid: 440b2990326bba74cabe8378c3bd2bbc, type: 3}
+  Coin: {fileID: 4499409175613975310, guid: 5ef70de735dd0c341925da5abc68a338, type: 3}
   enemies:
   - {fileID: 0}
   - {fileID: 0}
@@ -1784,6 +1787,10 @@ MonoBehaviour:
   redmap: {fileID: 0}
   bluemap: {fileID: 0}
   yellowmap: {fileID: 0}
+  gameManager: {fileID: 0}
+  startTime: 1000
+  endTime: 300
+  decrement: 50
   c: {fileID: 0}
 --- !u!1 &7871729168028205482
 GameObject:

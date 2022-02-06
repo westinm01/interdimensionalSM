@@ -8,7 +8,10 @@ public class EnemySpawner : MonoBehaviour
     public GameObject Octole;
     public GameObject Fuzlin;
     public GameObject EyeGuy;
+    public GameObject Coin;
     public GameObject[] enemies;    // Initialize to 1 of each kind of enemy
+    private GameObject gameCoin;
+    // private GameManager gm;
 
     /*
         Checks if there is an existing enemy on the input position
@@ -24,8 +27,17 @@ public class EnemySpawner : MonoBehaviour
         }
         return false;
     }
-    void Start()
-    {
+
+    public void ClearEnemies(){
+        foreach (GameObject enemy in enemies){
+            if (enemy != null){
+                Destroy(enemy.gameObject);
+            }
+        }
+        Destroy(gameCoin.gameObject);
+    }
+
+    public void InitializeEnemies(){
         int randX = 0;
         int randY = 0;
         bool hasConflict;
@@ -58,5 +70,14 @@ public class EnemySpawner : MonoBehaviour
             }
             enemies[i] = Instantiate(enemy, new Vector3(randX, randY), Quaternion.identity, transform.parent);
         }
+
+
+        randX = Random.Range(0, StaticBoard.numCols - 1);
+        randY = -Random.Range(0, StaticBoard.numRows - 1);
+        gameCoin = Instantiate(Coin, new Vector3(randX, randY), Quaternion.identity, transform.parent);
+    }
+    void Start()
+    {
+        // gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
     }
 }
