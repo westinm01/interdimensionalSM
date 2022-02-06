@@ -9,12 +9,15 @@ public class MapSwitch : MonoBehaviour
     public GameObject bluemap;
     public GameObject yellowmap;
     public GameObject gameManager;
+    public Powerup slushie;
+    public Powerup bolt;
     public float startTime;
     public float endTime;
     public float decrement;
     //public GameObject cam;
     public Camera c;
     [HideInInspector] public int state;
+    private PowerupSpawner spawner;
     private float initialStartTime;
     [HideInInspector]public float timer;
     void Start()
@@ -22,12 +25,14 @@ public class MapSwitch : MonoBehaviour
         bluemap=gameObject.transform.GetChild(0).gameObject;
         redmap=gameObject.transform.GetChild(1).gameObject;
         yellowmap=gameObject.transform.GetChild(2).gameObject;
+        spawner = gameObject.transform.GetComponent<PowerupSpawner>();
         /*GameObject[] objects = GameObject.FindGameObjectsWithTag("Main Camera");
         if(objects.length()>0){
             cam=objects[0];
             c=GetComponent<Camera>();
         }*/
         //c=GetComponent<Camera>();
+        spawner.power = slushie;
         redmap.SetActive(false);
         yellowmap.SetActive(false);
         state=0;
@@ -41,6 +46,7 @@ public class MapSwitch : MonoBehaviour
                 bluemap.SetActive(true);
                 redmap.SetActive(false);
                 yellowmap.SetActive(false);
+                spawner.power = slushie;
                 //175,178,255,255
                 c.backgroundColor=new Vector4(175/255f,178/255f,1f,1f);
                 
@@ -49,6 +55,7 @@ public class MapSwitch : MonoBehaviour
                 bluemap.SetActive(false);
                 redmap.SetActive(true);
                 yellowmap.SetActive(false);
+                spawner.power = bolt;
                 //255,160,129,255
                 c.backgroundColor=new Vector4(1f,160/255f,129/255f,1f);
             break;
