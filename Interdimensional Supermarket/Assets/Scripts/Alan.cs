@@ -18,13 +18,13 @@ public class Alan : MonoBehaviour
     public Powerup bolt;
     public Powerup coupon;
     private GameManager gm;
-    private Text txt;
+    public Text txt;
     private AudioSource alanAudio, powerupAudio, gos;
     // Start is called before the first frame update
     public static bool activeBolt = false;
     void Start()
     {
-        txt = GameObject.FindWithTag("coinText").GetComponent<Text>(); 
+        // txt = GameObject.FindWithTag("coinText").GetComponent<Text>(); 
         t=gameObject.transform;
         anim=gameObject.GetComponent<Animator>();
         gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
