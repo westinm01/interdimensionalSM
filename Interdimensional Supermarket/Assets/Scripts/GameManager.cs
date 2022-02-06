@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public EnemySpawner yellowSpawner;
     public GameObject gameOverScreen;
     public MapSwitch switcher;
+    public PowerupSpawner ps;
     private Alan alan;
 
     public void StartGame(){
@@ -21,6 +22,8 @@ public class GameManager : MonoBehaviour
         switcher.state = 0;
         switcher.timer = 0;
         switcher.UpdateStates();
+        ps.ClearPowerups();
+        ps.ResetTimer();
         if (alan.heldItem != null){
             Destroy(alan.heldItem.gameObject);
         }
