@@ -9,6 +9,8 @@ TagManager:
   - coinText
   - Powerup
   - EnemyChecker
+  - Bolt
+  - BoltSound
   layers:
   - Default
   - TransparentFX
