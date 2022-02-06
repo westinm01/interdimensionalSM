@@ -14,9 +14,12 @@ public class Alan : MonoBehaviour
     public Powerup heldItem;
     public Vector3 inventoryPos;
     public TextMeshProUGUI CouponUses;
+    public Powerup slushie;
+    public Powerup bolt;
+    public Powerup coupon;
     private GameManager gm;
     private Text txt;
-    private AudioSource alanAudio;
+    private AudioSource alanAudio, powerupAudio;
     // Start is called before the first frame update
     public static bool activeBolt = false;
     void Start()
@@ -26,6 +29,7 @@ public class Alan : MonoBehaviour
         anim=gameObject.GetComponent<Animator>();
         gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
         alanAudio = gameObject.GetComponent<AudioSource>();
+        powerupAudio = GameObject.FindGameObjectWithTag("PickUpSound").GetComponent<AudioSource>();
         Spawn();
     }
 
@@ -63,12 +67,26 @@ public class Alan : MonoBehaviour
             gm.EndGame();
         }
         else if (target.gameObject.tag == "Powerup"){
-            heldItem = target.gameObject.GetComponent<Powerup>();
-            target.gameObject.transform.position = inventoryPos;
-            if (target.gameObject.name == "coupon"){
-                Debug.Log("Picked up coupon");
-                CouponUses.gameObject.SetActive(true);
-                CouponUses.text = "Uses: " + heldItem.GetComponent<CouponScript>().uses;
+            powerupAudio.Play();
+            if (heldItem != null){
+                Destroy(heldItem.gameObject);
+            }
+            Destroy(target.gameObject);
+            switch (target.gameObject.name){
+                case "Slushie(Clone)":
+                    heldItem = Instantiate(slushie, inventoryPos, Quaternion.identity);
+                    break;
+                case "Bolt(Clone)":
+                    heldItem = Instantiate(bolt, inventoryPos, Quaternion.identity);
+                    break;
+                case "coupon(Clone)":
+                    heldItem = Instantiate(coupon, inventoryPos, Quaternion.identity);
+                    CouponUses.gameObject.SetActive(true);
+                    CouponUses.text = "Uses: " + heldItem.GetComponent<CouponScript>().uses;
+                    break;
+                default:
+                    Debug.Log(target.gameObject.name + " not found");
+                    break;
             }
         }
     }
