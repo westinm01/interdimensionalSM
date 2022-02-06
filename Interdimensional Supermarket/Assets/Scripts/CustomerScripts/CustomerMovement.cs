@@ -8,6 +8,7 @@ public class CustomerMovement : MonoBehaviour
     // public float walkSpeed;     // How fast the enemy moves
     public int staticBoardPos;
     public int freezeCycles;
+    public GameObject alan;
     private Rigidbody2D rb;
     private float moveTimer;
     private bool isFrozen;
@@ -41,6 +42,7 @@ public class CustomerMovement : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         moveTimer = 0;
+        alan = GameObject.FindGameObjectWithTag("Player");
     }
 
 
